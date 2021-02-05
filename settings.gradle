@@ -1,1 +1,1 @@
-include ':app', ':push', ':LRecyclerview_library'
+include ':app', ':LRecyclerview_library'

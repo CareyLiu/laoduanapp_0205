@@ -199,11 +199,6 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name="com.dexinkeji.cn.activity.SelectLoginActivity"
-            android:configChanges="locale|keyboardHidden|orientation"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden|adjustResize" />
-        <activity
             android:name="com.dexinkeji.cn.activity.CarBrandActivity"
             android:configChanges="locale|keyboardHidden|orientation"
             android:screenOrientation="portrait"
@@ -252,22 +247,7 @@
             android:name="com.dexinkeji.cn.activity.DiagnosisActivity"
             android:configChanges="locale|keyboardHidden|orientation"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden|adjustResize" /> <!-- 会话界面 -->
-        <activity
-            android:name="com.dexinkeji.cn.activity.ConsultDetailsActivity"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden|adjustResize">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-
-                <data
-                    android:host="com.dexinkeji.cn"
-                    android:pathPrefix="/conversation/"
-                    android:scheme="rong" />
-            </intent-filter>
-        </activity>
+            android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
             android:name="com.dexinkeji.cn.activity.LocationActivity"
             android:configChanges="locale|keyboardHidden|orientation"
@@ -338,31 +318,6 @@
             android:configChanges="locale|keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name="com.dexinkeji.cn.activity.ServiceActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
-        <activity
-            android:name="com.dexinkeji.cn.activity.PersonInfoAcctivity"
-            android:configChanges="locale|keyboardHidden|orientation"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden|adjustResize" />
-        <activity
-            android:name="com.dexinkeji.cn.activity.ReviseNicknameActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
-        <activity
-            android:name="com.dexinkeji.cn.activity.ConsultActiviy"
-            android:configChanges="locale|keyboardHidden|orientation"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden|adjustResize" />
-        <activity
-            android:name="com.dexinkeji.cn.activity.ServiceAboutActivity"
-            android:configChanges="locale|keyboardHidden|orientation"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
             android:name="com.dexinkeji.cn.activity.ControCarActivity"
             android:configChanges="locale|keyboardHidden|orientation"
@@ -885,22 +840,6 @@
             </intent-filter>
         </activity>
 
-        <!-- 会话新 -->
-        <activity
-            android:name="com.dexinkeji.cn.aakefudan.chat.ServiciLiaoActivity"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <data
-                    android:host="com.dexinkeji.cn"
-                    android:pathPrefix="/conversationnew"
-                    android:scheme="rong" />
-            </intent-filter>
-        </activity>
         <!-- 会话界面 -->
         <activity
             android:name="com.dexinkeji.cn.activity.rongyun_liaotian.ConversationActivity"

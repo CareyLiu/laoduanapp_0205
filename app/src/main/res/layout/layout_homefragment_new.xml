@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grayfff5f5f5"
@@ -38,7 +37,6 @@
             app:layout_constraintTop_toTopOf="@+id/iv_weizhi" />
 
         <ImageView
-            android:id="@+id/iv_saoma"
             android:layout_width="22dp"
             android:layout_height="22dp"
             android:layout_marginLeft="12dp"
@@ -138,7 +136,6 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:visibility="gone"
-                    android:id="@+id/rlv_ziying_or_remen"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:paddingLeft="14dp"

@@ -428,7 +428,6 @@ public class LoginActivity extends BaseActivity {
         } else {
             //登录角色 >1 时，让用户选择要登录的角色
             userlist.addAll(response.body().data);
-            startActivity(new Intent(LoginActivity.this, SelectLoginActivity.class));
         }
 
         String rongYunTouken = UserManager.getManager(mContext).getRongYun();

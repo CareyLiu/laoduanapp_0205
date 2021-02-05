@@ -98,7 +98,6 @@
 
 
         <androidx.core.widget.NestedScrollView
-            android:id="@+id/nsl_scollview"
             android:layout_width="match_parent"
             android:layout_height="400dp"
             app:layout_constraintTop_toBottomOf="@+id/constrain_shangpin">

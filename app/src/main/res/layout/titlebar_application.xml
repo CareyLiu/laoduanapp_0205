@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/re_title"
     android:layout_width="fill_parent"
     android:layout_height="50dp"
     android:orientation="horizontal">
 
     <ImageButton
-        android:id="@+id/ibtn_title_userinfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -54,7 +52,6 @@
         android:visibility="gone" />
 
     <ImageView
-        android:id="@+id/img_title_blt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -67,7 +64,6 @@
         android:visibility="gone" />
 
     <ImageView
-        android:id="@+id/img_repair_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -80,7 +76,6 @@
         android:visibility="gone" />
 
     <ImageButton
-        android:id="@+id/ibtn_title_service"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"

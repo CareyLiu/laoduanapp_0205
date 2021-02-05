@@ -18,7 +18,6 @@ import com.dexinkeji.cn.app.RxBus;
 import com.dexinkeji.cn.app.RxUtils;
 import com.dexinkeji.cn.config.MyApplication;
 import com.dexinkeji.cn.util.DialogManager;
-import com.umeng.message.PushAgent;
 
 import rx.Observable;
 import rx.subscriptions.CompositeSubscription;
@@ -39,8 +38,6 @@ public abstract class BaseActivity extends AppCompatActivity {
 		_subscriptions = RxUtils.getNewCompositeSubIfUnsubscribed(_subscriptions);
 		getdata();
 		getView();
-
-        PushAgent.getInstance(this).onAppStart();//友盟推送
 	}
 
 	protected void getView() {

@@ -1,4 +1,4 @@
-package com.dexinkeji.cn.aakefudan.view;
+package com.dexinkeji.cn.view;
 
 import android.content.Context;
 import android.content.Intent;
@@ -17,7 +17,6 @@ import com.lzy.okgo.model.Response;
 import com.lzy.okgo.request.base.Request;
 import com.dexinkeji.cn.R;
 import com.dexinkeji.cn.activity.HomeActivity;
-import com.dexinkeji.cn.activity.ServiceActivity;
 import com.dexinkeji.cn.app.BaseActivity;
 import com.dexinkeji.cn.callback.JsonCallback;
 import com.dexinkeji.cn.config.AppResponse;
@@ -130,8 +129,6 @@ public class LoginBtnView extends LinearLayout {
                             case "2"://维修厂
                                 break;
                             case "3"://客服端
-                                activity.startActivity(new Intent(activity, ServiceActivity.class));
-                                activity.finish();
                                 break;
                         }
                     }

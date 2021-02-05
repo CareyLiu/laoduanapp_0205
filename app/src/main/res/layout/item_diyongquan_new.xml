@@ -6,7 +6,6 @@
     android:layout_height="wrap_content">
 
     <com.flyco.roundview.RoundRelativeLayout
-        android:id="@+id/rlv_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="14dp"
@@ -111,7 +110,6 @@
 
 
                         <ImageView
-                            android:id="@+id/iv_jiantou"
                             android:layout_width="10dp"
                             android:layout_height="10dp"
                             android:layout_marginLeft="10dp"

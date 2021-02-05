@@ -11,8 +11,6 @@
     <string name="hand_add" translatable="false">手动添加</string>
     <string name="xjqx" translatable="false">申请相机权限</string>
     <string name="get_error" translatable="false">权限获取失败，该功能无法使用</string>
-    <string name="consult" translatable="false">咨询</string>
-    <string name="master_info" translatable="false">车主信息</string>
 
 
     <string name="loading" translatable="false">加载中,请稍后...</string>

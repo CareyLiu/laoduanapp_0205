@@ -38,8 +38,6 @@ import com.rairmmd.andmqtt.MqttConnect;
 import com.rairmmd.andmqtt.MqttSubscribe;
 import com.rairmmd.andmqtt.MqttUnSubscribe;
 import com.dexinkeji.cn.R;
-import com.dexinkeji.cn.aakefudan.chat.MyMessage;
-import com.dexinkeji.cn.aakefudan.chat.MyMessageItemProvider;
 import com.dexinkeji.cn.activity.LoginActivity;
 import com.dexinkeji.cn.adapter.view.GlobalAdapter;
 import com.dexinkeji.cn.app.AppConfig;
@@ -293,8 +291,6 @@ public class MyApplication extends MultiDexApplication {
         // 初始化. 建议在 Application 中进行初始化.
         String appKey = "cpj2xarlct6en";
         RongIM.init(context, appKey);
-        RongIM.registerMessageType(MyMessage.class);
-        RongIM.getInstance().registerMessageTemplate(new MyMessageItemProvider());
 
         String rongYunToken = PreferenceHelper.getInstance(getApplicationContext()).getString("token_rong", "");
         if (!StringUtils.isEmpty(rongYunToken)) {
