@@ -192,7 +192,6 @@ public class HomeFragment_New extends BaseFragment implements ObservableScrollVi
 
         //设置图片加载器
         banner.setImageLoader(new Radius_GlideImageLoader());
-        bannerXiuPeiChang.setImageLoader(new Radius_XiuPeiChangImageLoader());
         tvZiYingZhiGongTop = topPanel.findViewById(R.id.ziyingzhigong);
         tvReMenShangPinTop = topPanel.findViewById(R.id.remenshangpin);
         tvZiYingMiddle = middlePanel.findViewById(R.id.tv_ziying);

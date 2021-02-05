@@ -52,7 +52,7 @@ public class AboutUsActivity extends BaseActivity {
         String versionName = "";
         try {
             PackageManager packageManager = context.getPackageManager();
-            PackageInfo packageInfo = packageManager.getPackageInfo("com.smarthome.magic", 0);
+            PackageInfo packageInfo = packageManager.getPackageInfo("com.dexinkeji.cn", 0);
             versionName = packageInfo.versionName;
             if (TextUtils.isEmpty(versionName)) {
                 return "";

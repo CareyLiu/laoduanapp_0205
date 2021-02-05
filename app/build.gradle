@@ -22,7 +22,7 @@ android {
     }
     compileSdkVersion 29
     defaultConfig {
-        applicationId "com.smarthome.magic"
+        applicationId "com.dexinkeji.cn"
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 37

@@ -262,8 +262,8 @@ public class HeaterMqttService extends Service {
                 } else if (topic.contains("wit/app/")) {
                     if (message.contains("notify")) {
                         //判断当前不是启动页面或诊断页面
-                        if (!((Activity)  MyApplication.getAppContext()).getLocalClassName().equals("com.smarthome.magic.activity.SplashActivity") &&
-                                !((Activity)  MyApplication.getAppContext()).getLocalClassName().equals("com.smarthome.magic.activity.DiagnosisActivity")) {
+                        if (!((Activity)  MyApplication.getAppContext()).getLocalClassName().equals("com.dexinkeji.cn.activity.SplashActivity") &&
+                                !((Activity)  MyApplication.getAppContext()).getLocalClassName().equals("com.dexinkeji.cn.activity.DiagnosisActivity")) {
                             //故障、报警
                             Gson gson = new Gson();
                             notifyModel = gson.fromJson(message, NotifyModel.class);

@@ -10,7 +10,7 @@
         android:resizeable="true"
         android:smallScreens="true" />
 
-    <uses-permission android:name="com.smarthome.magic.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="com.dexinkeji.cn.permission.JPUSH_MESSAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于进行网络定位 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 用于访问GPS定位 -->
@@ -263,7 +263,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
 
                 <data
-                    android:host="com.smarthome.magic"
+                    android:host="com.dexinkeji.cn"
                     android:pathPrefix="/conversation/"
                     android:scheme="rong" />
             </intent-filter>
@@ -879,7 +879,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data
-                    android:host="com.smarthome.magic"
+                    android:host="com.dexinkeji.cn"
                     android:pathPrefix="/conversationlist"
                     android:scheme="rong" />
             </intent-filter>
@@ -896,7 +896,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data
-                    android:host="com.smarthome.magic"
+                    android:host="com.dexinkeji.cn"
                     android:pathPrefix="/conversationnew"
                     android:scheme="rong" />
             </intent-filter>
@@ -912,7 +912,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data
-                    android:host="com.smarthome.magic"
+                    android:host="com.dexinkeji.cn"
                     android:pathPrefix="/conversation/"
                     android:scheme="rong" />
             </intent-filter>
@@ -997,7 +997,7 @@
             android:exported="false">
             <intent-filter>
                 <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
-                <category android:name="com.smarthome.magic" />
+                <category android:name="com.dexinkeji.cn" />
             </intent-filter>
         </receiver>
 
