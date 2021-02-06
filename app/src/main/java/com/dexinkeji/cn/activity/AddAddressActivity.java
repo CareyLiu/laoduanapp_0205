@@ -198,46 +198,4 @@ public class AddAddressActivity extends BaseActivity implements OnAddressSelecte
                     }
                 });
     }
-
-
-//    public void requestData() {
-//        Map<String, String> map = new HashMap<>();
-//        map.put("code", "00005");
-//        map.put("key", Urls.key);
-//        map.put("type_id", "province_city_ch");
-//        Gson gson = new Gson();
-//        OkGo.<AppResponse<Region.DataBean>>post(Urls.SERVER_URL + "msg")
-//                .tag(this)//
-//                .upJson(gson.toJson(map))
-//                .execute(new JsonCallback<AppResponse<Region.DataBean>>() {
-//                    @Override
-//                    public void onSuccess(final Response<AppResponse<Region.DataBean>> response) {
-//                        DbHelper dbHelper = new DbHelper(AddAddressActivity.this);
-//                        db = dbHelper.getWritableDatabase();
-//                        //开始事务
-//                        db.beginTransaction();
-//                        String sql = "insert into address_dict(id,parentId,code,name) values (?,?,?,?)";
-//
-//                        for (Region.DataBean region:response.body().data){
-//                            db.execSQL(sql,new Object[]{region.getCode_id(),0,region.getCode_id(),region.getCode_name()});
-//                            for (Region.DataBean.ClBeanX clBeanX:region.getCl()){
-//                                db.execSQL(sql,new Object[]{clBeanX.getCode_id(),clBeanX.getCode_id_up(),clBeanX.getCode_id(),clBeanX.getCode_name()});
-//                                for (Region.DataBean.ClBeanX.ClBean clBean:clBeanX.getCl()){
-//                                    db.execSQL(sql,new Object[]{clBean.getCode_id(),clBean.getCode_id_up(),clBean.getCode_id(),clBean.getCode_name()});
-//                                }
-//                            }
-//                        }
-//                        //提交
-//                        db.setTransactionSuccessful();
-//                        db.endTransaction();
-//                        db.close();
-//
-//                    }
-//
-//                    @Override
-//                    public void onError(Response<AppResponse<Region.DataBean>> response) {
-//                        AlertUtil.t(AddAddressActivity.this,response.getException().getMessage());
-//                    }
-//                });
-//    }
 }

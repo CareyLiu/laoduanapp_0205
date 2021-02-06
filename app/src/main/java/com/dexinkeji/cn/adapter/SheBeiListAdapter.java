@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.dexinkeji.cn.R;
+import com.dexinkeji.cn.activity.shuinuan.Y;
 import com.dexinkeji.cn.baseadapter.baserecyclerviewadapterhelper.BaseSectionQuickAdapter;
 import com.dexinkeji.cn.baseadapter.baserecyclerviewadapterhelper.BaseViewHolder;
 import com.dexinkeji.cn.model.SheBeiModel;
@@ -43,7 +44,7 @@ public class SheBeiListAdapter extends BaseSectionQuickAdapter<SheBeiModel, Base
         if (item.validity_state.equals("1")) {
             helper.getView(R.id.tv_shiyong_zhuangtai).setBackgroundResource(R.drawable.bg_shebei_shiyongzhuangtai_red);
             TextView tv = (TextView) helper.getView(R.id.tv_shiyong_zhuangtai);
-            tv.setTextColor(mContext.getResources().getColor(R.color.color_FFFC0100));
+            tv.setTextColor(Y.getColor(R.color.text_color_main));
         } else if (item.validity_state.equals("2")) {
             helper.getView(R.id.tv_shiyong_zhuangtai).setBackgroundResource(R.drawable.bg_shebei_shiyongzhuangtai_gray);
             TextView tv = (TextView) helper.getView(R.id.tv_shiyong_zhuangtai);

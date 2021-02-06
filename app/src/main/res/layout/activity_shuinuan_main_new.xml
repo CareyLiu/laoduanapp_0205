@@ -110,7 +110,7 @@
                             android:gravity="center"
                             android:includeFontPadding="false"
                             android:text="定时"
-                            android:textColor="@color/shuinuan_text_color"
+                            android:textColor="@color/text_color_shuinuan_main"
                             android:textSize="26pt" />
                     </LinearLayout>
 
@@ -138,7 +138,7 @@
                             android:gravity="center"
                             android:includeFontPadding="false"
                             android:text="离线"
-                            android:textColor="@color/shuinuan_text_color"
+                            android:textColor="@color/text_color_shuinuan_main"
                             android:textSize="26pt" />
                     </LinearLayout>
 
@@ -152,7 +152,7 @@
                         android:gravity="center"
                         android:includeFontPadding="false"
                         android:text="服务剩余天数:40天"
-                        android:textColor="@color/shuinuan_text_color"
+                        android:textColor="@color/text_color_shuinuan_main"
                         android:textSize="26pt"
                         android:visibility="gone" />
 
@@ -166,7 +166,7 @@
                         android:gravity="center"
                         android:includeFontPadding="false"
                         android:text="有效期至:2012-12-12"
-                        android:textColor="@color/shuinuan_text_color"
+                        android:textColor="@color/text_color_shuinuan_main"
                         android:textSize="27pt" />
 
                     <TextView

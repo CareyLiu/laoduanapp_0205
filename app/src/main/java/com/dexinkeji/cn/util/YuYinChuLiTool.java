@@ -30,7 +30,6 @@ import com.dexinkeji.cn.app.ConstanceValue;
 import com.dexinkeji.cn.app.Notice;
 import com.dexinkeji.cn.app.RxBus;
 import com.dexinkeji.cn.app.UIHelper;
-import com.dexinkeji.cn.config.Logger;
 import com.dexinkeji.cn.config.PreferenceHelper;
 import com.dexinkeji.cn.inter.YuYinInter;
 import com.dexinkeji.cn.model.ResultModel;
@@ -902,7 +901,6 @@ public class YuYinChuLiTool {
 //                    }
 //                    i = i + 1;
 //                    //UIHelper.ToastMessage(context, "第" + String.valueOf(i) + "秒");
-//                    Logger.i(TAG, i + "");
 //
 //                    Thread.sleep(1000);
 //                } catch (Exception e) {
@@ -937,9 +935,6 @@ public class YuYinChuLiTool {
                         guanBiYuYinThread = "0";
                     }
                     i = i + 1;
-                    //UIHelper.ToastMessage(context, "第" + String.valueOf(i) + "秒");
-                    Logger.i(TAG, i + "");
-
                     Thread.sleep(1000);
                 } catch (Exception e) {
                     e.printStackTrace();

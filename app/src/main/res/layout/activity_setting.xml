@@ -63,7 +63,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
                     android:text="头像"
-                    android:textColor="@color/black_333333"
+                    android:textColor="@color/text_color_3"
                     android:textSize="15sp" />
 
                 <ImageView
@@ -105,14 +105,14 @@
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
                     android:text="昵称"
-                    android:textColor="@color/black_333333" />
+                    android:textColor="@color/text_color_3" />
 
                 <TextView
                     android:id="@+id/tv_nickname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="秦朗"
-                    android:textColor="@color/black_333333" />
+                    android:textColor="@color/text_color_3" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -145,14 +145,14 @@
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
                     android:text="性别"
-                    android:textColor="@color/black_333333" />
+                    android:textColor="@color/text_color_3" />
 
                 <TextView
                     android:id="@+id/tv_gender"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="男"
-                    android:textColor="@color/black_333333" />
+                    android:textColor="@color/text_color_3" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -185,14 +185,14 @@
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
                     android:text="出生日期"
-                    android:textColor="@color/black_333333" />
+                    android:textColor="@color/text_color_3" />
 
                 <TextView
                     android:id="@+id/tv_birthday"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2019-04-02"
-                    android:textColor="@color/black_333333" />
+                    android:textColor="@color/text_color_3" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -225,13 +225,13 @@
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
                     android:text="收货地址"
-                    android:textColor="@color/black_333333" />
+                    android:textColor="@color/text_color_3" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="修改/添加"
-                    android:textColor="@color/black_333333" />
+                    android:textColor="@color/text_color_3" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -264,7 +264,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
                     android:text="提现账号设置（支付宝）"
-                    android:textColor="@color/black_333333" />
+                    android:textColor="@color/text_color_3" />
 
                 <TextView
                     android:id="@+id/tv_zhifubao_ming"
@@ -302,7 +302,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
                     android:text="提现账号设置（微信）"
-                    android:textColor="@color/black_333333" />
+                    android:textColor="@color/text_color_3" />
 
                 <TextView
                     android:id="@+id/tv_weixin_ming"
@@ -340,7 +340,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
                     android:text="登录密码设置"
-                    android:textColor="@color/black_333333" />
+                    android:textColor="@color/text_color_3" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -377,7 +377,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
                     android:text="支付密码设置"
-                    android:textColor="@color/black_333333" />
+                    android:textColor="@color/text_color_3" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -414,7 +414,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
                     android:text="清除缓存"
-                    android:textColor="@color/black_333333" />
+                    android:textColor="@color/text_color_3" />
 
                 <TextView
                     android:id="@+id/tv_cache"
@@ -452,7 +452,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_weight="1"
                     android:text="设备配网"
-                    android:textColor="@color/black_333333" />
+                    android:textColor="@color/text_color_3" />
 
 
                 <ImageView

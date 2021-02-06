@@ -218,8 +218,6 @@ public class ShopDetailsActivity extends BaseActivity {
     }
 
     private void setListAdapter() {
-
-        // recyclerView.addItemDecoration(new RecycleItemSpance(20, 2));
         GridLayoutManager layoutManager = new GridLayoutManager(mContext, 2);
         rlvList.addItemDecoration(new GridAverageUIDecoration(14, 10));
 

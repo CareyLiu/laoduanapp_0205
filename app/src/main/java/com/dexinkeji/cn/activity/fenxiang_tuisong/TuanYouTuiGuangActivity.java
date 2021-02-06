@@ -88,7 +88,7 @@ public class TuanYouTuiGuangActivity extends BaseActivity {
                 num = 0;
                 type = "1";
                 getNet(type);
-                tv_zhijie.setTextColor(mContext.getResources().getColor(R.color.black_333333));
+                tv_zhijie.setTextColor(mContext.getResources().getColor(R.color.text_color_3));
                 viewZhiJie.setVisibility(View.VISIBLE);
                 tv_jianjie.setTextColor(mContext.getResources().getColor(R.color.color_999999));
                 viewJianJie.setVisibility(View.GONE);
@@ -106,7 +106,7 @@ public class TuanYouTuiGuangActivity extends BaseActivity {
                 getNet(type);
                 tuanYouTuiGuangAdapter.removeAllFooterView();
 
-                tv_jianjie.setTextColor(mContext.getResources().getColor(R.color.black_333333));
+                tv_jianjie.setTextColor(mContext.getResources().getColor(R.color.text_color_3));
                 viewJianJie.setVisibility(View.VISIBLE);
                 tv_zhijie.setTextColor(mContext.getResources().getColor(R.color.color_999999));
                 viewZhiJie.setVisibility(View.GONE);

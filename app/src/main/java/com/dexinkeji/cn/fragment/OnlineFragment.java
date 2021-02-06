@@ -181,7 +181,6 @@ public class OnlineFragment extends BaseFragment implements Observer {
                 if (message.type == ConstanceValue.MSG_ADD_CHELIANG_SUCCESS) {
                     //车辆添加成功
                     srLSmart.autoRefresh();
-
                 }
             }
         }));

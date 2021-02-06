@@ -224,4 +224,7 @@ dependencies {
     implementation project(path: ':LRecyclerview_library')
     implementation 'com.alibaba:fastjson:1.1.67.android'
     implementation 'org.greenrobot:greendao:3.2.2'
+
+    //屏幕适配方案
+    implementation 'com.bulong.rudeness:rudeness:latest.release@aar'
 }

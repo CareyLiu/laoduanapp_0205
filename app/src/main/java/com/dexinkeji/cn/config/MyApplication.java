@@ -23,6 +23,7 @@ import androidx.lifecycle.Observer;
 import androidx.multidex.MultiDexApplication;
 
 import com.billy.android.loading.Gloading;
+import com.bulong.rudeness.RudenessScreenHelper;
 import com.google.gson.Gson;
 import com.iflytek.cloud.SpeechConstant;
 import com.iflytek.cloud.SpeechUtility;
@@ -189,6 +190,7 @@ public class MyApplication extends MultiDexApplication {
         super.onCreate();
         //设计图标注的宽度
         int designWidth = 720;
+        new RudenessScreenHelper(this, designWidth).activate();
 
         JPushInterface.setDebugMode(true);    // 设置开启日志,发布时请关闭日志
         JPushInterface.init(this);
@@ -697,7 +699,6 @@ public class MyApplication extends MultiDexApplication {
         PickerView.sCenterColor = getResources().getColor(R.color.blue_light);
         PickerView.sOutColor = Color.GRAY;
 
-        // BasePicker
         int padding = Util.dip2px(this, 20);
         BasePicker.sDefaultPaddingRect = new Rect(padding, padding, padding, padding);
         BasePicker.sDefaultPickerBackgroundColor = Color.WHITE;
@@ -713,7 +714,6 @@ public class MyApplication extends MultiDexApplication {
     }
 
     private void initOkgo() {
-
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
         HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor("OkGo");
         //log打印级别，决定了log显示的详细程度

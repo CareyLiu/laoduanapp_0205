@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="14dp"
                 android:text="登录密码"
-                android:textColor="@color/black_333333"
+                android:textColor="@color/text_color_3"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="14dp"
                 android:text="确认密码"
-                android:textColor="@color/black_333333"
+                android:textColor="@color/text_color_3"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 

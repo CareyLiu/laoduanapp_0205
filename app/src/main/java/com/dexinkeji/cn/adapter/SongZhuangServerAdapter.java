@@ -32,7 +32,7 @@ public class SongZhuangServerAdapter extends BaseQuickAdapter<GoodsDetails_f.Dat
         } else {
             TextView tv = helper.getView(R.id.tv_text);
             constraintLayout.setBackgroundResource(R.drawable.background_noselect);
-            tv.setTextColor(mContext.getResources().getColor(R.color.black_333333));
+            tv.setTextColor(mContext.getResources().getColor(R.color.text_color_3));
         }
 
 

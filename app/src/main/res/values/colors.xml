@@ -6,7 +6,6 @@
     <!-- 主题背景颜色-->
     <color name="app_bg">#FC5F20</color>
     <!--字体-->
-    <color name="car_text_black7">#4e4e4e</color>
     <!-- 透明 -->
     <color name="white">#ffffff</color>
     <!-- 海军色 -->
@@ -35,82 +34,19 @@
     <color name="province_line_border">#D0D0D0</color>
     <color name="background">#f7f7f7</color>
     <color name="gray">#a5abad</color>
-
-
     <color name="dark_blue">#005e83</color>
-
-
-    <!--basic color-->
     <color name="pink">#E80046</color>
-
     <color name="bg_app">#F1F1F1</color>
-
-    <!--字体颜色-->
-    <!--深灰色 验证码底色-->
-    <!--//淡灰色-登录页使用-->
-    <!--登录页细线-->
     <color name="oranger">#ff6633</color>
     <color name="gragline">#f6f6f6</color>
-    <color name="sousuo">#999999</color>
     <color name="gray_444444">#444444</color>
     <color name="gray_666666">#666666</color>
-    <color name="black_333333">#333333</color>
     <color name="black_222222">#222222</color>
     <color name="black_000000">#000000</color>
     <color name="grayline_ececec">#ececec</color>
     <color name="grayline_cecece">#cecece</color>
-    <color name="grayeeeeeee">#eeeeee</color>
-
-    <!-- 店铺色值 -->
-
-
-    <!--include_toolbar的背景颜色&#45;&#45;统一修改-例:城市选择页面等!-->
-
-    <!--仿今日头条下面用到的资源-->
     <color name="activity_bg_color">#f5f5f5</color>
-
     <color name="grayfff5f5f5">#fff5f5f5</color>
-
-
-    <!--reds-->
-
-    <!-- pinks -->
-
-    <!-- purples -->
-
-    <!-- deep purples -->
-
-    <!-- indigo -->
-
-    <!--blue-->
-
-    <!-- light blue-->
-
-    <!-- cyan -->
-
-    <!-- teal -->
-
-    <!-- green -->
-
-    <!--light green-->
-
-    <!-- lime-->
-
-    <!--yellow -->
-
-    <!--amber-->
-
-    <!--orange-->
-
-    <!--deep orange-->
-
-    <!--brown -->
-
-    <!--grey-->
-    <!--blue grey-->
-
-    <!--7陌-->
-
     <color name="color_cd013d">#cd013d</color>
     <color name="color_999999">#999999</color>
     <color name="black_666666">#666666</color>
@@ -128,23 +64,24 @@
     <color name="color_FFFC0100">#FFFC0100</color>
     <color name="gray_999999">#999999</color>
 
-    <!--  八紫主颜色  -->
-    <color name="bazi_main">#6666CC</color>
-
     <!--  客户端主颜色  -->
     <color name="text_red">#FC0100</color>
-
-
     <color name="blue00fff">#00FFFF</color>
-
     <color name="gray999999">#999999</color>
     <color name="bg_app_new">#02222B</color>
     <color name="bg_title_new">#00151B</color>
-    <color name="text_color_blue">#00FFFF</color>
-    <color name="text_color_9">#999999</color>
-    <color name="shuinuan_text_color">#23CEFD</color>
-
     <color name="blue_ff3a85f8">#ff3a85f8</color>
+
+
+    <color name="text_color_main">#3A85F8</color>
+    <color name="text_coler_tab">#4E4E4E</color>
+    <color name="text_color_blue">#00FFFF</color>
+
+    <color name="text_color_3">#333333</color>
+    <color name="text_color_9">#999999</color>
+    <color name="text_color_e">#EEEEEE</color>
+
+    <color name="text_color_shuinuan_main">#23CEFD</color>
 
 
 </resources>

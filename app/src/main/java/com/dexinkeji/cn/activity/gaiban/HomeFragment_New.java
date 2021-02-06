@@ -24,13 +24,11 @@ import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
 import com.amap.api.location.AMapLocationQualityReport;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
-import com.coremedia.iso.boxes.RecordingYearBox;
 import com.dexinkeji.cn.activity.dingdan.MyOrderActivity;
 import com.dexinkeji.cn.activity.fenxiang_tuisong.TuanYouTuiGuangActivity;
 import com.dexinkeji.cn.activity.saoma.ScanActivity;
 import com.dexinkeji.cn.adapter.FunctionListAdapter;
 import com.dexinkeji.cn.config.Radius_GlideImageLoader;
-import com.dexinkeji.cn.config.Radius_XiuPeiChangImageLoader;
 import com.dexinkeji.cn.model.FunctionListBean;
 import com.flyco.roundview.RoundRelativeLayout;
 import com.github.jdsjlzx.ItemDecoration.GridItemDecoration;
@@ -53,7 +51,6 @@ import com.dexinkeji.cn.adapter.DirectAdapter;
 import com.dexinkeji.cn.adapter.HotGoodsAdapter;
 import com.dexinkeji.cn.adapter.ZhiKongListAdapter;
 import com.dexinkeji.cn.adapter.gaiban.HomeReMenAdapter;
-import com.dexinkeji.cn.adapter.gaiban.HomeZiYingAdapter;
 import com.dexinkeji.cn.app.App;
 import com.dexinkeji.cn.app.AppConfig;
 import com.dexinkeji.cn.app.ConstanceValue;
@@ -764,9 +761,9 @@ public class HomeFragment_New extends BaseFragment implements ObservableScrollVi
     private void setZiYingOrReMenLine(String remenOrZiYing) {
 
             tvZiYingTop.setTextColor(getActivity().getResources().getColor(R.color.black_666666));
-            tvZiYingZhiGongTop.setTextColor(getActivity().getResources().getColor(R.color.black_333333));
+            tvZiYingZhiGongTop.setTextColor(getActivity().getResources().getColor(R.color.text_color_3));
             tvZiYingMiddle.setTextColor(getActivity().getResources().getColor(R.color.black_666666));
-            tvZiYingZhiGongMiddle.setTextColor(getActivity().getResources().getColor(R.color.black_333333));
+            tvZiYingZhiGongMiddle.setTextColor(getActivity().getResources().getColor(R.color.text_color_3));
             tvRemTop.setTextColor(getActivity().getResources().getColor(R.color.color_FFFC0100));
             tvReMenShangPinTop.setTextColor(getActivity().getResources().getColor(R.color.color_FFFC0100));
             tvReMenMiddle.setTextColor(getActivity().getResources().getColor(R.color.color_FFFC0100));
