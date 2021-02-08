@@ -164,14 +164,12 @@ public class FengnuandishiActivity extends BaseActivity {
                 .execute(new JsonCallback<AppResponse>() {
                     @Override
                     public void onSuccess(final Response<AppResponse> response) {
-                        //Y.t(response.body().msg);
-                        //UIHelper.ToastMessage(mContext, response.body().msg);
                         UIHelper.ToastMessage(mContext, "定时成功");
                     }
 
                     @Override
                     public void onError(Response<AppResponse> response) {
-                        //Y.tError(response);
+
                     }
                 });
     }
@@ -180,7 +178,6 @@ public class FengnuandishiActivity extends BaseActivity {
     public boolean showToolBar() {
         return false;
     }
-
 
     public void chaXunDingShi() {
         Map<String, String> map = new HashMap<>();
@@ -263,20 +260,10 @@ public class FengnuandishiActivity extends BaseActivity {
 
                     @Override
                     public void onError(Response<AppResponse<DingShiResultModel.DataBean>> response) {
-//                        String msg = response.getException().getMessage();
-//                        String[] msgToast = msg.split("：");
-//                        if (msgToast.length == 3) {
-//                            Y.t(msgToast[2]);
-//                        } else {
-//                            Y.t("网络异常");
-//                        }
-
                         UIHelper.ToastMessage(mContext, response.body().msg);
                     }
                 });
-
     }
-
 
     private void selectData() {
         if (timePicker == null) {

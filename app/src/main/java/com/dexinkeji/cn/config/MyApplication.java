@@ -100,7 +100,7 @@ public class MyApplication extends MultiDexApplication {
 
 
     //String mqttUrl = "tcp://192.168.1.127";//大个本地
-     String mqttUrl = "tcp://mqtt.hljsdkj.com";//正式
+    String mqttUrl = "tcp://mqtt.hljsdkj.com";//正式
     //String mqttUrl = "tcp://ggw.hljsdkj.com";//ggw
 
 
@@ -202,19 +202,15 @@ public class MyApplication extends MultiDexApplication {
         initDefaultPicker();
         initOkgo();
 
-
         // 获取当前包名
         String packageName = context.getPackageName();
-// 获取当前进程名
+        // 获取当前进程名
         String processName = JinChengUtils.getProcessName();
-// 设置是否为上报进程
+        // 设置是否为上报进程
         CrashReport.UserStrategy strategy = new CrashReport.UserStrategy(context);
         strategy.setUploadProcess(processName == null || processName.equals(packageName));
-// 初始化Bugly
-
-
+        // 初始化Bugly
         Bugly.init(getApplicationContext(), "9aef7d7467", false);
-
 
         CompositeSubscription _subscriptions = new CompositeSubscription();
         _subscriptions = RxUtils.getNewCompositeSubIfUnsubscribed(_subscriptions);
@@ -263,30 +259,15 @@ public class MyApplication extends MultiDexApplication {
         }));
 
         setMqttConnect();
-
-
         application = this;
-
         mCacheMap = new HashMap<>();
-
         mBroadcastData = new MutableLiveData<>();
         IntentFilter filter = new IntentFilter(WifiManager.NETWORK_STATE_CHANGED_ACTION);
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-//            filter.addAction(LocationManager.PROVIDERS_CHANGED_ACTION);
-//        }
         registerReceiver(mReceiver, filter);
 
         //view
         Gloading.initDefault(new GlobalAdapter());
         Logger.addLogAdapter(new AndroidLogAdapter());
-    }
-
-
-
-
-    private void initTuya() {//涂鸦智能家居
-//        TuyaHomeSdk.init(this);
-//        TuyaHomeSdk.setDebugMode(true);
     }
 
     private void initRongYun() {
@@ -587,7 +568,6 @@ public class MyApplication extends MultiDexApplication {
                                 });
 
                                 sendRx(ConstanceValue.MSG_MQTT_CONNECT_CHONGLIAN_ONSUCCESS, "");
-
                             }
 
                             @Override
@@ -600,33 +580,6 @@ public class MyApplication extends MultiDexApplication {
             }
         }
     }
-
-
-    public boolean containsProperty(String key) {
-        Properties props = getProperties();
-        return props.containsKey(key);
-    }
-
-    public void setProperties(Properties ps) {
-        AppConfig.getAppConfig(this).set(ps);
-    }
-
-    public Properties getProperties() {
-        return AppConfig.getAppConfig(this).get();
-    }
-
-    public void setProperty(String key, String value) {
-        AppConfig.getAppConfig(this).set(key, value);
-    }
-
-    public String getProperty(String key) {
-        return AppConfig.getAppConfig(this).get(key);
-    }
-
-    public void removeProperty(String... key) {
-        AppConfig.getAppConfig(this).remove(key);
-    }
-
 
     private void initLifecycle() {
         registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
@@ -699,6 +652,7 @@ public class MyApplication extends MultiDexApplication {
         PickerView.sCenterColor = getResources().getColor(R.color.blue_light);
         PickerView.sOutColor = Color.GRAY;
 
+        // BasePicker
         int padding = Util.dip2px(this, 20);
         BasePicker.sDefaultPaddingRect = new Rect(padding, padding, padding, padding);
         BasePicker.sDefaultPickerBackgroundColor = Color.WHITE;
@@ -714,6 +668,7 @@ public class MyApplication extends MultiDexApplication {
     }
 
     private void initOkgo() {
+
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
         HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor("OkGo");
         //log打印级别，决定了log显示的详细程度
@@ -826,7 +781,6 @@ public class MyApplication extends MultiDexApplication {
 
         // 如果是字符串的byte[]字节形式
         return SerializeUtil.Byte2String(bytes);
-
     }
 
 
@@ -844,42 +798,14 @@ public class MyApplication extends MultiDexApplication {
         }
 
         unregisterReceiver(mReceiver);
-
-    }
-
-    public void setHuLvJingBao(List<CarCode> code) {
-        //访问网络获取数据 下面的列表数据
-        Map<String, Object> map = new HashMap<>();
-        map.put("code", "03221");
-        map.put("key", Urls.key);
-        map.put("token", UserManager.getManager(getApp()).getAppToken());
-        map.put("where", code);
-
-        Gson gson = new Gson();
-        Log.e("map_data", gson.toJson(map));
-        OkGo.<AppResponse>post(MESSAGE_URL)
-                .tag(this)//
-                .upJson(gson.toJson(map))
-                .execute(new JsonCallback<AppResponse>() {
-                    @Override
-                    public void onSuccess(Response<AppResponse> response) {
-
-                    }
-                });
-    }
-
-    public class CarCode {
-        String car_code;
     }
 
     public void sendRx(int strValue, String strContent) {
         Notice n = new Notice();
         n.type = strValue;
-//                            n.content = message.toString();
         n.content = strContent;
         RxBus.getDefault().sendRx(n);
     }
-
 }
 
 
