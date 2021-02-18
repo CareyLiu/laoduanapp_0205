@@ -139,6 +139,4 @@ public abstract class BaseActivity extends AppCompatActivity {
 	public void sendRx(Notice msg) {
 		RxBus.getDefault().sendRx(msg);
 	}
-
-	
 }

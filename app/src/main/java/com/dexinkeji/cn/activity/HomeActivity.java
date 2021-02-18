@@ -29,7 +29,7 @@ import com.jaeger.library.StatusBarUtil;
 import com.rairmmd.andmqtt.AndMqtt;
 import com.rairmmd.andmqtt.MqttPublish;
 import com.dexinkeji.cn.R;
-import com.dexinkeji.cn.activity.gaiban.HomeFragment_New;
+import com.dexinkeji.cn.fragment.HomeFragment_New;
 import com.dexinkeji.cn.app.AppConfig;
 import com.dexinkeji.cn.app.AppManager;
 import com.dexinkeji.cn.app.BaseActivity;

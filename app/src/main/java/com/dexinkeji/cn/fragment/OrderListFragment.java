@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -148,7 +149,6 @@ public class OrderListFragment extends BaseFragment {
         map.put("user_pay_check", user_pay_check);//全部
         map.put("page_number", String.valueOf(pageNumber));
 
-        // if (NetworkUtils.isNetAvailable(DaLiBaoZhiFuActivity.this)) {
         Gson gson = new Gson();
         OkGo.<AppResponse<OrderListModel.DataBean>>post(Urls.HOME_PICTURE_HOME)
                 .tag(getActivity())//
@@ -189,7 +189,7 @@ public class OrderListFragment extends BaseFragment {
     }
 
     String strTitle;
-    ImageView ivNone;
+    LinearLayout ivNone;
 
     @Override
     protected void initLogic() {
@@ -327,11 +327,7 @@ public class OrderListFragment extends BaseFragment {
          */
         switch (dataBean.getUser_pay_check()) {
             case "1":
-                // helper.setText(R.id.tv_caozuo, "去支付");
-
-//                if (dataBean.getUser_pay_check())
                 showSingSelect(dataBean);
-
                 break;
             case "2":
                 // helper.setText(R.id.tv_caozuo, "申请退款");
@@ -352,58 +348,43 @@ public class OrderListFragment extends BaseFragment {
             case "5":
                 //helper.setText(R.id.tv_caozuo, "查看详情");
                 UIHelper.ToastMessage(getActivity(), "联系卖家");
-
                 Conversation.ConversationType conversationType = Conversation.ConversationType.PRIVATE;
                 String targetId = response.body().data.get(0).getInst_accid();
                 String instName = response.body().data.get(0).getInst_name();
                 Bundle bundle = new Bundle();
                 bundle.putString("dianpuming", instName);
                 bundle.putString("inst_accid", response.body().data.get(0).getInst_accid());
-                bundle.putString("shoptype","2");
+                bundle.putString("shoptype", "2");
                 RongIM.getInstance().startConversation(getActivity(), conversationType, targetId, instName, bundle);
-
                 break;
             case "6":
                 showDngDanCaoZuo(dataBean, position, "是否删除订单", "04157");
-
                 // helper.setText(R.id.tv_caozuo, "联系买家");
                 // helper.setVisible(R.id.tv_caozuo, false);
                 break;
             case "7":
-
                 // helper.setText(R.id.tv_caozuo, "申请退款");
-
                 break;
             case "8":
                 // helper.setText(R.id.tv_yipingjia, "退款申请");
-
                 //  helper.setText(R.id.tv_caozuo, "申请退款");
-
                 break;
             case "9":
                 //  helper.setText(R.id.tv_yipingjia, "退款中");
                 //  helper.setText(R.id.tv_caozuo, "申请退款");
-
                 break;
             case "10":
                 //  helper.setText(R.id.tv_yipingjia, "退款/退货");
                 //   helper.setText(R.id.tv_caozuo, "再次购买");
                 showDngDanCaoZuo(dataBean, position, "是否删除订单", "04157");
-
                 break;
             case "11":
                 //  helper.setText(R.id.tv_yipingjia, "订单失效");
                 // helper.setText(R.id.tv_caozuo, "删除订单");
                 // showDngDanCaoZuo(dataBean, position, "是否删除订单", "04157");
-
                 break;
 
         }
-
-    }
-
-    private void getNetQueRenShouHuo() {
-
     }
 
     public void doCaoZuo1(OrderListModel.DataBean dataBean, int position) {
@@ -412,20 +393,15 @@ public class OrderListFragment extends BaseFragment {
          */
         switch (dataBean.getUser_pay_check()) {
             case "1":
-
                 // helper.setText(R.id.tv_caozuo1, "取消订单");
                 //getNet_QUXIAO(dataBean.getShop_form_id());
                 showDngDanCaoZuo(dataBean, position, "是否取消订单", "04156");
-
                 break;
             case "2":
-
                 //helper.setText(R.id.tv_caozuo1, "删除订单");
                 showDngDanCaoZuo(dataBean, position, "是否删除订单", "04157");
-
                 break;
             case "3":
-
                 //helper.setText(R.id.tv_caozuo1, "催发货");
                 //getNet_CaoZuo(dataBean.getShop_form_id(), "04167", position);
                 //催发货
@@ -437,12 +413,9 @@ public class OrderListFragment extends BaseFragment {
                 break;
             case "5":
 //                helper.setText(R.id.tv_caozuo1, "申请退款");
-//
-//                break;
                 DingDanShenQingTuikuanActivity.actionStart(getActivity(), "我要退款(无需退货)", dataBean.getShop_form_id(), dataBean.getPay_money());
                 break;
             case "6":
-
                 // helper.setText(R.id.tv_caozuo1, "查看物流");
                 //  DefaultX5WebViewActivity.actionStart(getActivity(), dataBean.getExpress_url());
                 // showDngDanCaoZuo(dataBean, position, "是否删除订单", "04157");
@@ -465,21 +438,14 @@ public class OrderListFragment extends BaseFragment {
                 } else if (orderListAdapter.getData().get(position).getWares_type().equals("3")) {
 
                 }
-
-
                 // helper.setText(R.id.tv_caozuo1, "删除订单");
                 break;
-
             // helper.setText(R.id.tv_caozuo1, "删除订单");
-
             //  helper.setText(R.id.tv_caozuo1, "联系卖家");
             //  helper.setVisible(R.id.tv_caozuo1, false);
             case "11":
-
                 showDngDanCaoZuo(dataBean, position, "是否删除订单", "04157");
                 break;
-
-
         }
     }
 
@@ -490,14 +456,11 @@ public class OrderListFragment extends BaseFragment {
         switch (dataBean.getUser_pay_check()) {
             case "1":
 
-
                 break;
             case "2":
 
-
                 break;
             case "3":
-
 
                 break;
             case "4":
@@ -505,7 +468,6 @@ public class OrderListFragment extends BaseFragment {
                 break;
 
             case "6":
-
                 // helper.setText(R.id.tv_caozuo1, "查看物流");
                 //  DefaultX5WebViewActivity.actionStart(getActivity(), dataBean.getExpress_url());
                 // showDngDanCaoZuo(dataBean, position, "是否删除订单", "04157");
@@ -523,17 +485,12 @@ public class OrderListFragment extends BaseFragment {
                 // ZiJianShopMallDetailsActivity.actionStart(getActivity(), dataBean.getShop_product_id(), dataBean.getWares_id());
                 // helper.setText(R.id.tv_caozuo1, "删除订单");
                 break;
-
             // helper.setText(R.id.tv_caozuo1, "删除订单");
-
             //  helper.setText(R.id.tv_caozuo1, "联系卖家");
             //  helper.setVisible(R.id.tv_caozuo1, false);
             case "11":
-
                 //  showDngDanCaoZuo(dataBean, position, "是否删除订单", "04157");
                 break;
-
-
         }
     }
 
@@ -543,8 +500,6 @@ public class OrderListFragment extends BaseFragment {
         map.put("key", Urls.key);
         map.put("token", PreferenceHelper.getInstance(getActivity()).getString("app_token", "0"));
         map.put("shop_form_id", dataBean.getShop_form_id());
-
-        // if (NetworkUtils.isNetAvailable(DaLiBaoZhiFuActivity.this)) {
         Gson gson = new Gson();
         OkGo.<AppResponse<Object>>post(Urls.HOME_PICTURE_HOME)
                 .tag(getActivity())//
@@ -558,12 +513,8 @@ public class OrderListFragment extends BaseFragment {
                     @Override
                     public void onError(Response<AppResponse<Object>> response) {
                         super.onError(response);
-                        //  UIHelper.ToastMessage(getActivity(), response.body().msg);
                         String str = response.getException().getMessage();
-                        //    Log.i("cuifahuo", str);
-
                         String[] str1 = str.split("：");
-
                         if (str1.length == 3) {
                             UIHelper.ToastMessage(getActivity(), str1[2]);
                         }
@@ -580,79 +531,6 @@ public class OrderListFragment extends BaseFragment {
                     }
                 });
 
-    }
-
-//    public void doCaoZuo2(OrderListModel.DataBean dataBean) {
-//
-//        /**
-//         * user_pay_check	买家状态:1.待付款 2.待分享(拼)3.待发货 4.已发货 5.到店消费6.待评价 7.完成 8.退款申请 9.退款中 10.退款/退货 11 订单失效
-//         */
-//        switch (dataBean.getUser_pay_check()) {
-//
-//            case "1":
-//
-//                helper.setText(R.id.tv_caozuo2, "联系买家");
-//
-//                break;
-//            case "2":
-//
-//                helper.setText(R.id.tv_caozuo2, "联系买家");
-//                helper.setVisible(R.id.tv_caozuo2, false);
-//                break;
-//            case "3":
-//
-//                helper.setText(R.id.tv_caozuo2, "申请退款");
-//                break;
-//            case "4":
-//
-//                helper.setText(R.id.tv_caozuo2, "联系买家");
-//                helper.setVisible(R.id.tv_caozuo2, false);
-//                break;
-//            case "5":
-//
-//                //helper.setText(R.id.tv_caozuo2, "联系买家");
-//                helper.setVisible(R.id.tv_caozuo2, false);
-//                break;
-//            case "6":
-//
-//                helper.setText(R.id.tv_caozuo2, "删除订单");
-//                helper.setVisible(R.id.tv_caozuo, false);
-//                break;
-//            case "7":
-//
-//                helper.setText(R.id.tv_caozuo2, "联系买家");
-//                helper.setVisible(R.id.tv_caozuo2, false);
-//                break;
-//            case "8":
-//
-//                helper.setText(R.id.tv_caozuo2, "联系买家");
-//                helper.setVisible(R.id.tv_caozuo2, false);
-//                break;
-//            case "9":
-//
-//                helper.setText(R.id.tv_caozuo2, "联系买家");
-//                helper.setVisible(R.id.tv_caozuo2, false);
-//                break;
-//            case "10":
-//
-//                helper.setText(R.id.tv_caozuo2, "申请退款");
-//                break;
-//            case "11":
-//                helper.setVisible(R.id.tv_caozuo2, false);
-//                break;
-//
-//        }
-//
-//    }
-
-
-    public void enterDetails(String type) {
-
-        switch (type) {
-            case "1":
-
-                break;
-        }
     }
 
     String payType = "4";//1 支付宝 4 微信
@@ -672,13 +550,6 @@ public class OrderListFragment extends BaseFragment {
     }
 
     private void getWeiXinOrZhiFuBao(String pay_id, OrderListModel.DataBean dataBean) {
-        //   productDetailsForJava.get(0).shop_form_text = etLiuYan.getText().toString();
-//        form_product_id 	购物车产品id
-//        shop_product_id	商品套餐id
-//        pay_count	购买数量
-//        shop_form_text	订单备注(买家留言)
-//         wares_go_type	消费方式：2.邮递 3.到店
-//
         ProductDetails productDetails = new ProductDetails();
         productDetails.shop_product_id = dataBean.getShop_product_id();
         productDetails.pay_count = dataBean.getPay_count();
@@ -687,7 +558,6 @@ public class OrderListFragment extends BaseFragment {
         productDetails.form_product_id = dataBean.getInstallation_type_id();
         productDetailsForJava.add(productDetails);
 
-        //OrderListModel.DataBean dataBean = orderListAdapter.getData().get(position);
         if (pay_id.equals("1")) {//1支付宝
             Map<String, Object> map = new HashMap<>();
             map.put("key", Urls.key);
@@ -695,39 +565,23 @@ public class OrderListFragment extends BaseFragment {
             map.put("operate_type", dataBean.getOperate_type());
             map.put("pay_id", pay_id);
             map.put("pay_type", "1");
-            //  map.put("users_addr_id", users_addr_id);
-            //   map.put("pro", productDetailsForJava);
-            // map.put("deduction_type", userHongBao);
             map.put("shop_form_id", dataBean.getShop_form_id());
-            //shop_form_id
             String myHeaderLog = new Gson().toJson(map);
             String myHeaderInfo = StringEscapeUtils.unescapeJava(myHeaderLog);
-            Log.i("request_log", myHeaderInfo);
-            Gson gson = new Gson();
             OkGo.<AppResponse<YuZhiFuModel_AliPay.DataBean>>post(Urls.DALIBAO_PAY)
                     .tag(getActivity())//
                     .upJson(myHeaderInfo)
                     .execute(new JsonCallback<AppResponse<YuZhiFuModel_AliPay.DataBean>>() {
                         @Override
                         public void onSuccess(Response<AppResponse<YuZhiFuModel_AliPay.DataBean>> response) {
-
                             appId = response.body().data.get(0).getPay();
                             form_id = response.body().data.get(0).getOut_trade_no();
                             payV2(appId);//这里填写后台返回的支付信息
-                            //progressDialog.dismiss();
-                        }
-
-                        @Override
-                        public void onError(Response<AppResponse<YuZhiFuModel_AliPay.DataBean>> response) {
-                            super.onError(response);
-                            //progressDialog.dismiss();
                         }
                     });
 
         } else {//2微信
-
             //获得后台的支付信息\
-
             /**
              * {
              *   "key":"20180305124455yu",
@@ -744,21 +598,9 @@ public class OrderListFragment extends BaseFragment {
             map.put("operate_type", dataBean.getOperate_type());
             map.put("pay_id", pay_id);
             map.put("pay_type", "4");
-
-            //   map.put("pay_type", payType);
-
-            // map.put("users_addr_id", users_addr_id);
-            // map.put("pro", productDetailsForJava);
-
-            // map.put("deduction_type", userHongBao);
             map.put("shop_form_id", dataBean.getShop_form_id());
-
             String myHeaderLog = new Gson().toJson(map);
             String myHeaderInfo = StringEscapeUtils.unescapeJava(myHeaderLog);
-            Log.i("request_log", myHeaderInfo);
-
-            // if (NetworkUtils.isNetAvailable(DaLiBaoZhiFuActivity.this)) {
-            Gson gson = new Gson();
             OkGo.<AppResponse<YuZhiFuModel.DataBean>>post(Urls.DALIBAO_PAY)
                     .tag(getActivity())//
                     .upJson(myHeaderInfo)
@@ -767,8 +609,6 @@ public class OrderListFragment extends BaseFragment {
                         public void onSuccess(Response<AppResponse<YuZhiFuModel.DataBean>> response) {
                             api = WXAPIFactory.createWXAPI(getActivity(), response.body().data.get(0).getPay().getAppid());
                             form_id = response.body().data.get(0).getPay().getOut_trade_no();
-
-                            //     finish();
                             goToWeChatPay(response.body().data.get(0));
                             progressDialog.dismiss();
                         }
@@ -780,7 +620,6 @@ public class OrderListFragment extends BaseFragment {
                         }
                     });
         }
-
     }
 
     /**
@@ -803,7 +642,6 @@ public class OrderListFragment extends BaseFragment {
     }
 
     private static final int SDK_PAY_FLAG = 1;
-
 
     /**
      * 支付宝支付业务
@@ -840,19 +678,15 @@ public class OrderListFragment extends BaseFragment {
                      */
                     String resultInfo = payResult.getResult();// 同步返回需要验证的信息
                     String resultStatus = payResult.getResultStatus();
-                    // 判断resultStatus 为9000则代表支付成功
                     if (TextUtils.equals(resultStatus, "9000")) {
                         PaySuccessUtils.getNet(getActivity(), form_id);
                         UIHelper.ToastMessage(getActivity(), "支付成功", Toast.LENGTH_SHORT);
-                        //  getActivity().finish();
                         pageNumber = 0;
                         getNet();//支付成功重新刷新接口
-
                     } else {
                         // 该笔订单真实的支付结果，需要依赖服务端的异步通知。
                         Toast.makeText(getActivity(), "支付失败", Toast.LENGTH_SHORT).show();
                         PaySuccessUtils.getNetFail(getActivity(), form_id);
-
                     }
                     break;
                 }
@@ -862,7 +696,6 @@ public class OrderListFragment extends BaseFragment {
         }
 
     };
-
 
     private int choice;
     private AlertDialog.Builder builder;
@@ -966,6 +799,5 @@ public class OrderListFragment extends BaseFragment {
                 });
         builder.create().show();
     }
-
 }
 

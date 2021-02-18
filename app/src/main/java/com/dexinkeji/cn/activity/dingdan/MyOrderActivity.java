@@ -31,9 +31,6 @@ import java.util.List;
 import butterknife.ButterKnife;
 
 public class MyOrderActivity extends BaseActivity {
-
-
-    private static final String TAG = "MyOrderActivity";
     MagicIndicator magicIndicator;
 
     List<String> tagList;
@@ -75,8 +72,6 @@ public class MyOrderActivity extends BaseActivity {
         } else if (chooseXiangMu.equals("待评价")) {
             viewPager.setCurrentItem(6);
         }
-
-
     }
 
     @Override
@@ -98,9 +93,8 @@ public class MyOrderActivity extends BaseActivity {
             public IPagerTitleView getTitleView(Context context, final int index) {
                 SimplePagerTitleView simplePagerTitleView = new ColorTransitionPagerTitleView(context);
                 simplePagerTitleView.setNormalColor(MyOrderActivity.this.getResources().getColor(R.color.black_666666));
-                simplePagerTitleView.setSelectedColor(MyOrderActivity.this.getResources().getColor(R.color.orange_fa7e00));
+                simplePagerTitleView.setSelectedColor(MyOrderActivity.this.getResources().getColor(R.color.text_color_main));
                 simplePagerTitleView.setText(list.get(index));
-                //   App.scaleScreenHelper.loadViewSize(simplePagerTitleView, 35);
                 simplePagerTitleView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -114,26 +108,19 @@ public class MyOrderActivity extends BaseActivity {
             public IPagerIndicator getIndicator(Context context) {
                 LinePagerIndicator linePagerIndicator = new LinePagerIndicator(context);
                 linePagerIndicator.setMode(LinePagerIndicator.MODE_WRAP_CONTENT);
-                linePagerIndicator.setColors(MyOrderActivity.this.getResources().getColor(R.color.orange_fa7e00));
+                linePagerIndicator.setColors(MyOrderActivity.this.getResources().getColor(R.color.text_color_main));
                 return linePagerIndicator;
             }
         });
-        //commonNavigator.setAdjustMode(true);
         magicIndicator.setNavigator(commonNavigator);
         ViewPagerHelper.bind(magicIndicator, viewPager);
-
     }
 
 
     private void setThisAdapter() {
-        // messageListFragments.clear();//清空
         int count = tagList.size();
         for (int i = 0; i < count; i++) {
             Bundle data = new Bundle();
-//            if (tagList.get(i).id != null) {
-//                data("id", tagList.get(i) + "");
-//            }
-            //  data.putInt("type", list.get(i).type);
             data.putString("title", tagList.get(i));
             OrderListFragment newfragment = new OrderListFragment();
             newfragment.setArguments(data);
@@ -141,9 +128,7 @@ public class MyOrderActivity extends BaseActivity {
         }
         NewsFragmentPagerAdapter mAdapetr = new NewsFragmentPagerAdapter(getSupportFragmentManager(), messageListFragments);
         viewPager.setAdapter(mAdapetr);
-
     }
-
 
     @Override
     public boolean showToolBar() {
@@ -160,7 +145,6 @@ public class MyOrderActivity extends BaseActivity {
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //imm.hideSoftInputFromWindow(findViewById(R.id.cl_layout).getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
                 finish();
             }
         });

@@ -1,4 +1,4 @@
-package com.dexinkeji.cn.activity.gaiban;
+package com.dexinkeji.cn.fragment;
 
 import android.Manifest;
 import android.content.Context;

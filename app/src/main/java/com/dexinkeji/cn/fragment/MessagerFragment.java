@@ -149,14 +149,9 @@ public class MessagerFragment extends BaseFragment implements Observer {
 
 
     private void setThisAdapter() {
-        // messageListFragments.clear();//清空
         int count = tagList.size();
         for (int i = 0; i < count; i++) {
             Bundle data = new Bundle();
-//            if (tagList.get(i).id != null) {
-//                data("id", tagList.get(i) + "");
-//            }
-            //  data.putInt("type", list.get(i).type);
             data.putString("title", tagList.get(i));
             MessageListFragment newfragment = new MessageListFragment();
             newfragment.setArguments(data);

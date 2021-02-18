@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
@@ -50,22 +51,17 @@ import static com.dexinkeji.cn.get_net.Urls.MESSAGE_URL;
 
 
 public class MessageListFragment extends BaseFragment {
-
-
     private RecyclerView recyclerView;
-    List<MessageModel.DataBean> mDatas = new ArrayList<>();
+    private List<MessageModel.DataBean> mDatas = new ArrayList<>();
     private MessageListAdapter messageListAdapter;
 
-    SmartRefreshLayout srLSmart;
-
-    String notifyId = "";
-
+    private SmartRefreshLayout srLSmart;
+    private String notifyId = "";
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
-
 
     public void getNet() {
         Map<String, String> map = new HashMap<>();
@@ -132,7 +128,7 @@ public class MessageListFragment extends BaseFragment {
     }
 
     String strTitle;
-    ImageView ivNone;
+    LinearLayout ivNone;
 
     @Override
     protected void initLogic() {
@@ -186,9 +182,6 @@ public class MessageListFragment extends BaseFragment {
         messageListAdapter.setOnItemChildLongClickListener(new BaseQuickAdapter.OnItemChildLongClickListener() {
             @Override
             public boolean onItemChildLongClick(BaseQuickAdapter adapter, View view, int position) {
-                //UIHelper.ToastMessage(getActivity(), "长按");
-
-
                 MyCarCaoZuoDialog_Delete myCarCaoZuoDialog_delete = new MyCarCaoZuoDialog_Delete(getActivity(), new MyCarCaoZuoDialog_Delete.OnDialogItemClickListener() {
                     @Override
                     public void clickLeft() {
@@ -220,10 +213,8 @@ public class MessageListFragment extends BaseFragment {
                          * 8.普通消息 9.广告消息 11.商城消息
                          * 12.商城订单消息 13.拼单消息
                          */
-
                         MessageModel.DataBean dataBean = (MessageModel.DataBean) adapter.getData().get(position);
                         switch (mDatas.get(position).getNotify_type()) {
-
                             case "1":
                             case "2":
                             case "3":
@@ -236,18 +227,13 @@ public class MessageListFragment extends BaseFragment {
                             case "11":
                                 break;
                             case "12":
-//                                OrderListModel.DataBean dataBean = new OrderListModel.DataBean();
-//                                dataBean.setShop_form_id(mDatas.get(position).getOper_id());
-
                                 XiaoXiEnterDingDanActivity.actionStart(getActivity(), mDatas.get(position).getOper_id());
                                 break;
                             case "13":
                                 break;
-
                         }
                         break;
                 }
-
             }
         });
     }
@@ -275,9 +261,7 @@ public class MessageListFragment extends BaseFragment {
         map.put("token", UserManager.getManager(getApp()).getAppToken());
         map.put("notify_id", notifyId);
         map.put("of_user_id", of_user_id);
-
         Gson gson = new Gson();
-        Log.e("map_data", gson.toJson(map));
         OkGo.<AppResponse>post(MESSAGE_URL)
                 .tag(this)
                 .upJson(gson.toJson(map))

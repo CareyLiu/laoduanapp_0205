@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="30pt">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="84pt"
+                android:background="@color/text_color_main">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="23pt">
+
+                    <ImageView
+                        android:layout_width="31pt"
+                        android:layout_height="31pt"
+                        android:layout_marginRight="8pt"
+                        android:src="@mipmap/home_nav_icon_weizhi" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="哈尔滨"
+                        android:textColor="@color/white"
+                        android:textSize="31pt" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:includeFontPadding="false"
+                    android:text="德鑫驻车冷暖平台"
+                    android:textColor="@color/white"
+                    android:textSize="35pt"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="46pt"
+                        android:layout_height="46pt"
+                        android:layout_centerInParent="true"
+                        android:layout_marginHorizontal="23pt"
+                        android:layout_marginRight="8pt"
+                        android:src="@mipmap/home_nav_icon_xiaoxi" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="142pt"
+                android:background="@color/text_color_main"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="69pt"
+                        android:layout_height="69pt"
+                        android:layout_marginBottom="12pt"
+                        android:src="@mipmap/home_tab_saoyisao" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="扫一扫"
+                        android:textColor="@color/white"
+                        android:textSize="27pt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="69pt"
+                        android:layout_height="69pt"
+                        android:layout_marginBottom="12pt"
+                        android:src="@mipmap/home_tab_vip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="续费"
+                        android:textColor="@color/white"
+                        android:textSize="27pt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="69pt"
+                        android:layout_height="69pt"
+                        android:layout_marginBottom="12pt"
+                        android:src="@mipmap/home_tab_dingdan" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="订单"
+                        android:textColor="@color/white"
+                        android:textSize="27pt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="69pt"
+                        android:layout_height="69pt"
+                        android:layout_marginBottom="12pt"
+                        android:src="@mipmap/home_tab_tuiguang" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="推广统计"
+                        android:textColor="@color/white"
+                        android:textSize="27pt" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="196pt"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="92pt"
+                        android:layout_height="92pt"
+                        android:layout_marginBottom="15pt"
+                        android:src="@mipmap/home_zhikong_icon_fengnuan" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="风暖加热器"
+                        android:textColor="@color/text_color_3"
+                        android:textSize="27pt" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="92pt"
+                        android:layout_height="92pt"
+                        android:layout_marginBottom="15pt"
+                        android:src="@mipmap/home_zhikong_icon_shuinuan" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="水暖加热器"
+                        android:textColor="@color/text_color_3"
+                        android:textSize="27pt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="92pt"
+                        android:layout_height="92pt"
+                        android:layout_marginBottom="15pt"
+                        android:src="@mipmap/home_zhikong_icon_kongtiao" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="驻车空调"
+                        android:textColor="@color/text_color_3"
+                        android:textSize="27pt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="92pt"
+                        android:layout_height="92pt"
+                        android:layout_marginBottom="15pt"
+                        android:src="@mipmap/home_zhikong_icon_kongche" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="防丢电瓶"
+                        android:textColor="@color/text_color_3"
+                        android:textSize="27pt" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="92pt"
+                android:layout_marginHorizontal="19pt"
+                android:layout_marginBottom="23pt"
+                android:background="@drawable/bg_white_radius_15"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30pt"
+                    android:layout_height="30pt"
+                    android:layout_marginLeft="24pt"
+                    android:layout_marginRight="12pt" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:includeFontPadding="false"
+                    android:text="商城"
+                    android:textColor="@color/text_color_3"
+                    android:textSize="31pt"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12pt"
+                    android:includeFontPadding="false"
+                    android:text="查看更多"
+                    android:textColor="@color/text_color_9"
+                    android:textSize="27pt" />
+
+                <ImageView
+                    android:layout_width="31pt"
+                    android:layout_height="31pt"
+                    android:layout_marginRight="12pt"
+                    android:src="@mipmap/arrow_gray" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
