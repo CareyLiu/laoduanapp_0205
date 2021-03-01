@@ -26,6 +26,7 @@ import com.dexinkeji.cn.fragment.HomeFragment;
 import com.dexinkeji.cn.fragment.HomeFragment_New;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.gson.Gson;
+import com.gyf.barlibrary.ImmersionBar;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 import com.jaeger.library.StatusBarUtil;
 import com.rairmmd.andmqtt.AndMqtt;
@@ -386,5 +387,11 @@ public class HomeActivity extends BaseActivity {
 
     public static HomeActivity getInstance() {
         return new HomeActivity();
+    }
+
+        @Override
+    public void initImmersion() {
+        mImmersionBar = ImmersionBar.with(this);
+        mImmersionBar.init();
     }
 }
