@@ -22,6 +22,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import com.dexinkeji.cn.fragment.HomeFragment;
+import com.dexinkeji.cn.fragment.HomeFragment_New;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.gson.Gson;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
@@ -29,7 +31,6 @@ import com.jaeger.library.StatusBarUtil;
 import com.rairmmd.andmqtt.AndMqtt;
 import com.rairmmd.andmqtt.MqttPublish;
 import com.dexinkeji.cn.R;
-import com.dexinkeji.cn.fragment.HomeFragment_New;
 import com.dexinkeji.cn.app.AppConfig;
 import com.dexinkeji.cn.app.AppManager;
 import com.dexinkeji.cn.app.BaseActivity;
@@ -81,18 +82,11 @@ public class HomeActivity extends BaseActivity {
     private AlarmClass alarmClass;
     private int i = 0;
     private TishiDialog tishiDialog;
-    private YuYinChuLiTool yuYinChuLiTool;
 
     @Override
     public int getContentViewResId() {
         return R.layout.activity_main;
     }
-
-    @Override
-    public void initImmersion() {
-        mImmersionBar.with(this).statusBarColor(R.color.white).init();
-    }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,12 +100,7 @@ public class HomeActivity extends BaseActivity {
         initData();
         initEvent();
         AppManager.getAppManager().addActivity(this);
-        String yuYinZhuShouEnable = PreferenceHelper.getInstance(HomeActivity.this).getString(AppConfig.YUYINZHUSHOU, "0");
-        Log.i("yuYinZhuShou", "yuYinZhuShou: " + yuYinZhuShouEnable);
-        if (yuYinZhuShouEnable.equals("0")) {
-        } else {
-            wakeUpClick();
-        }
+
         _subscriptions.add(toObservable().observeOn(AndroidSchedulers.mainThread()).subscribe(new Action1<Notice>() {
             @Override
             public void call(Notice notice) {
@@ -123,8 +112,6 @@ public class HomeActivity extends BaseActivity {
                     handler.removeCallbacks(runnable);
                 } else if (notice.type == ConstanceValue.MSG_ZHINENGJIAJU) {
                     mVp.setCurrentItem(1, false);
-                } else if (notice.type == ConstanceValue.MSG_YUYINKAIQITONGZHI) {
-                    wakeUpClick();
                 }
             }
         }));
@@ -226,35 +213,28 @@ public class HomeActivity extends BaseActivity {
         }
     }
 
-    public MediaPlayer player;
-    public AudioFocusManager audioFocusManage;
-    public int position;
+    private Handler handler;
     private Runnable runnable;
 
     public void playMusic(int res) {
         boolean flag = false;
-
         Activity currentActivity = AppManager.getAppManager().currentActivity();
         if (currentActivity != null) {
             if (!currentActivity.getClass().getSimpleName().equals(DiagnosisActivity.class.getSimpleName())) {
                 MyCarCaoZuoDialog_Notify myCarCaoZuoDialog_notify = new MyCarCaoZuoDialog_Notify(getAppContext(), new MyCarCaoZuoDialog_Notify.OnDialogItemClickListener() {
                     @Override
                     public void clickLeft() {
-                        // player.stop();
                         if (SoundPoolUtils.soundPool != null) {
                             SoundPoolUtils.soundPool.release();
                         }
-
                     }
 
                     @Override
                     public void clickRight() {
                         DiagnosisActivity.actionStart(HomeActivity.this, alarmClass);
-                        //SoundPoolUtils.soundPool.release();
                         if (SoundPoolUtils.soundPool != null) {
                             SoundPoolUtils.soundPool.release();
                         }
-
                     }
                 }
                 );
@@ -268,7 +248,6 @@ public class HomeActivity extends BaseActivity {
                         }
                     }
                 });
-
             } else {
                 flag = true;
             }
@@ -325,8 +304,10 @@ public class HomeActivity extends BaseActivity {
     private void initData() {
         List<Fragment> fragments = new ArrayList<>(5);
         items = new SparseIntArray(5);
-        HomeFragment_New homeFragment = new HomeFragment_New();
-        OnlineFragment onlineFragment = new OnlineFragment();
+//        HomeFragment_New homeFragment = new HomeFragment_New();
+        HomeFragment homeFragment = new HomeFragment();
+//        OnlineFragment onlineFragment = new OnlineFragment();
+        HomeFragment_New onlineFragment = new HomeFragment_New();
         MessagerFragment messagerFragment = new MessagerFragment();
         MineFragment mineFragment = new MineFragment();
         fragments.add(homeFragment);
@@ -350,7 +331,6 @@ public class HomeActivity extends BaseActivity {
      * set listeners
      */
     private void initEvent() {
-        // set listener to change the current item of view pager when click bottom nav item
         mBnve.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             private int previousPosition = -1;
 
@@ -381,13 +361,6 @@ public class HomeActivity extends BaseActivity {
             }
         });
     }
-    Handler handler;
-
-    @Override
-    protected void onResumeFragments() {
-        super.onResumeFragments();
-
-    }
 
     /**
      * view pager adapter
@@ -414,9 +387,4 @@ public class HomeActivity extends BaseActivity {
     public static HomeActivity getInstance() {
         return new HomeActivity();
     }
-    private void wakeUpClick() {
-        yuYinChuLiTool.beginWakeUp();
-    }
-
-
 }

@@ -285,12 +285,6 @@ public class HomeFragment_New extends BaseFragment implements ObservableScrollVi
             }
         });
 
-        GridItemDecoration divider = new GridItemDecoration.Builder(getActivity())
-                .setHorizontal(R.dimen.default_divider_padding_5dp)
-                .setVertical(R.dimen.default_divider_padding_5dp)
-                .setColorResource(R.color.white)
-                .build();
-
         hotLRecyclerViewAdapter = new LRecyclerViewAdapter(hotGoodsAdapter);
         directLRecyclerViewAdapter = new LRecyclerViewAdapter(directAdapter);
         getData();
@@ -499,7 +493,6 @@ public class HomeFragment_New extends BaseFragment implements ObservableScrollVi
         map.put("code", "04341");
         map.put("key", Urls.key);
         map.put("token", UserManager.getManager(cnt).getAppToken());
-        Log.i("taoken_gg", UserManager.getManager(cnt).getAppToken());
         Gson gson = new Gson();
         OkGo.<AppResponse<TuiGuangMaModel.DataBean>>post(Urls.SERVER_URL + "shop_new/app/user")
                 .tag(cnt)//
