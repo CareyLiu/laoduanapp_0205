@@ -306,8 +306,8 @@ public class HomeActivity extends BaseActivity {
         items = new SparseIntArray(5);
 //        HomeFragment_New homeFragment = new HomeFragment_New();
         HomeFragment homeFragment = new HomeFragment();
-//        OnlineFragment onlineFragment = new OnlineFragment();
-        HomeFragment_New onlineFragment = new HomeFragment_New();
+        OnlineFragment onlineFragment = new OnlineFragment();
+//        HomeFragment_New onlineFragment = new HomeFragment_New();
         MessagerFragment messagerFragment = new MessagerFragment();
         MineFragment mineFragment = new MineFragment();
         fragments.add(homeFragment);
