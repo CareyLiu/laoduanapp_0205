@@ -735,6 +735,7 @@
                 <action android:name="io.rong.push.intent.THIRD_PARTY_PUSH_STATE" />
             </intent-filter>
         </receiver>
+
         <activity
             android:name="com.dexinkeji.cn.activity.CheLianWangNoticeActvity"
             android:configChanges="locale|keyboardHidden|orientation"
@@ -812,9 +813,10 @@
         <!-- since 3.0.9 Required SDK 核心功能-->
         <provider
             android:name="cn.jpush.android.service.DataProvider"
-            tools:replace="android:authorities"
             android:authorities="com.dexinkeji.cn.DataProvider"
-            android:exported="false" />
+            android:exported="false"
+            tools:replace="android:authorities" />
+
         <activity
             android:name="com.dexinkeji.cn.activity.FengNuanActivity"
             android:configChanges="locale|keyboardHidden|orientation"
@@ -888,6 +890,20 @@
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />
         <activity
             android:name="com.dexinkeji.cn.activity.RenTiGanYingSetting"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <!-- 续费列表 -->
+        <activity
+            android:name=".activity.vip.VipListActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <!-- 缴费记录 -->
+        <activity
+            android:name=".activity.vip.VipJiluActivity"
             android:configChanges="keyboard|keyboardHidden|orientation"
             android:screenOrientation="fullSensor"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" />

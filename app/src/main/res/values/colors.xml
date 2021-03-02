@@ -78,8 +78,13 @@
     <color name="text_color_blue">#00FFFF</color>
 
     <color name="text_color_3">#333333</color>
+    <color name="text_color_6">#666666</color>
     <color name="text_color_9">#999999</color>
     <color name="text_color_e">#EEEEEE</color>
 
     <color name="text_color_shuinuan_main">#23CEFD</color>
+
+
+    <!--分割线-->
+    <color name="line">#EEEEEE</color>
 </resources>
