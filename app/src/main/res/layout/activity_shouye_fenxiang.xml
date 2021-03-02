@@ -17,7 +17,7 @@
             android:id="@+id/cl_1"
             android:layout_width="match_parent"
             android:layout_height="46dp"
-            android:background="@drawable/white_radios_15"
+            android:background="@drawable/bg_white_radius_15"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView

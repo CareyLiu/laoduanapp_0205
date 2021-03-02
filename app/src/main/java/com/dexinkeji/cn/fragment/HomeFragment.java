@@ -22,6 +22,7 @@ import com.dexinkeji.cn.activity.dingdan.MyOrderActivity;
 import com.dexinkeji.cn.activity.fenxiang_tuisong.TuanYouTuiGuangActivity;
 import com.dexinkeji.cn.activity.saoma.ScanActivity;
 import com.dexinkeji.cn.activity.shuinuan.Y;
+import com.dexinkeji.cn.activity.vip.VipListActivity;
 import com.dexinkeji.cn.activity.zijian_shangcheng.FenLeiThirdActivity;
 import com.dexinkeji.cn.activity.zijian_shangcheng.ZiJianShopMallDetailsActivity;
 import com.dexinkeji.cn.adapter.gaiban.HomeReMenAdapter;
@@ -344,6 +345,7 @@ public class HomeFragment extends BaseFragment implements ObservableScrollView.S
                 clickSaoyisao();
                 break;
             case R.id.ll_tab_vip://续费相关
+                VipListActivity.actionStart(getActivity());
                 break;
             case R.id.ll_tab_dingdan:
                 MyOrderActivity.actionStart(getActivity(), "");
